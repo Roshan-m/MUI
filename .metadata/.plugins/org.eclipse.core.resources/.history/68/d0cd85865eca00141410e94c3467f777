@@ -1,0 +1,84 @@
+//This sets the background color of the master UIView 
+Titanium.UI.setBackgroundColor('#000');
+
+//Tab group
+var tabGroup = Titanium.UI.createTabGroup();
+
+
+//Create base UI tab and root window
+var win1 = Titanium.UI.createWindow({  
+    title:'About Me',
+    backgroundColor:'#ffffff'
+});
+var aboutTab = Titanium.UI.createTab({  
+    icon:'KS_nav_views.png',
+    title:'About Me',
+    viewShadowColor :'#D6F0FF',
+    window:win1
+   
+});
+
+var profilePic = Ti.UI.createView({
+	width: 150,
+	height: 150,
+	backgroundImage: 'selfpic.jpg',
+	top: 30, 
+});
+
+
+var aboutMe = Titanium.UI.createLabel({
+	color:'#000',
+	text:'My name is Roshan Mykoo and I am from Queens, New York. I graduated St.Francis Prep in 2013 and then atteneded Queensborough Community College for one year. I have now transfered to Full Sail University currently pursuing my degreee in Mobile Development. ',
+	font:{fontSize:20,fontFamily:'Helvetica Neue'},
+	textAlign:'center',
+	width:'auto'
+});
+win1.add(aboutMe);
+win1.add(profilePic);
+
+
+//Create controls tab and root window
+var win2 = Titanium.UI.createWindow({  
+    title:'My Interest',
+    backgroundColor:'#fff'
+});
+var tab2 = Titanium.UI.createTab({  
+    icon:'KS_nav_ui.png',
+    title:'My Interest',
+    window:win2
+});
+
+
+var listView = Ti.UI.createListView();
+var sections = [];
+
+var fruitSection = Ti.UI.createListSection({ headerTitle: 'Fruits'});
+var fruitDataSet = [
+    {properties: { title: 'Apple'}},
+    {properties: { title: 'Banana'}},
+];
+fruitSection.setItems(fruitDataSet);
+sections.push(fruitSection);
+
+
+// var label2 = Titanium.UI.createLabel({
+	// color:'#999',
+	// text:'My Interest',
+	// font:{fontSize:20,fontFamily:'Helvetica Neue'},
+	// textAlign:'center',
+	// width:'auto'
+// });
+
+//win2.add(label2);
+
+
+
+//
+//  add tabs
+//
+tabGroup.addTab(aboutTab);  
+tabGroup.addTab(tab2);  
+
+
+// open tab group
+tabGroup.open();

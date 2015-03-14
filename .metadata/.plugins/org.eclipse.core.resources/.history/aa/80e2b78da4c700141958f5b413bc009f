@@ -1,0 +1,102 @@
+//Roshan Mykoo
+//3-10-2015
+//Client Information
+
+var goty = {
+	
+		ps4:{
+			title: 'Playstation 4',
+			items:	[
+			{name: "Destiny",
+			 image:"",
+			 desc:""},
+			 {name: 'Bloodborne',
+			 image: '',
+			 desc: ''},
+			 {name: 'The Order: 1886',
+			 image:'',
+			 desc:''},
+			 {name: 'The Last of Us',
+			 image: '',
+			 desc: ''},
+			 {name: 'Dragon Ball Xenoverse',
+			image: '',
+			desc: ''}]},
+	
+		xboxOne:{
+			title: 'Xbox One',
+			items:	[
+			{name: 'Call Of Duty : Advanced Warfare',
+			image: '', 
+			desc: ''},
+			{name:'Dragon Age Inquisition',
+			image: '',
+			desc: ''},
+			{name: 'Forza Horizon 2',
+			image: '',
+			desc:''},
+			{name: 'Sunset Overdrive',
+			image:'',
+			desc:''},
+			{name: 'Titanfall',
+			image: '',
+			desc: ''}]},
+		
+		wiiU:{
+			title: 'Wii U',
+			items:	[
+			{name: 'Donkey Kong Country Tropical Freeze',
+			image: '', 
+			desc: ''},
+			{name:'Bayonetta 2',
+			image: '',
+			desc: ''},
+			{name: 'Hyrule Warriors',
+			image: '',
+			desc:''},
+			{name: 'Mario Kart 8',
+			image:'',
+			desc:''},
+			{name: 'Super Smash Bros. for Wii U',
+			image: '',
+			desc: ''}]},
+
+		
+		psVita:{
+			title: 'PS Vita',
+			items:	[
+			{name: 'COUNTER SPY',
+			image: '', 
+			desc: ''},
+			{name:'Shovel Knight',
+			image: '',
+			desc: ''},
+			{name: 'FIFA 15',
+			image: '',
+			desc:''},
+			{name: 'The Binding of Isaac',
+			image:'',
+			desc:''},
+			{name: 'OlliOlli',
+			image: '',
+			desc: ''}]},
+	
+		threeDS:{
+			title: '3DS',
+			items:	[
+			{name: 'Super Smash Bros. for 3DS',
+			image: '', 
+			desc: ''},
+			{name:'Animals Crossing New Leaf',
+			image: '',
+			desc: ''},
+			{name: 'Kirby Triple Deluxe',
+			image: '',
+			desc:''},
+			{name: 'Mario Golf World Tour',
+			image:'',
+			desc:''},
+			{name: 'Pokemon Alpha Sapphire',
+			image: '',
+			desc: ''}]},
+};
