@@ -1,0 +1,78 @@
+//Roshan Mykoo
+//3-10-2015
+//Client Information
+var data = require('Data');
+var win1 = Ti.UI.createWindow({
+	backgroundColor:"#ffffff",
+});
+
+var click = function(info) {
+	
+	var detail = Ti.UI.createWindow({
+	backgroundColor:'white',
+	title : info.name,
+	});
+	var description = Ti.UI.createLabel({
+		text: info.description,
+		bottom: 100,
+		left: 7,
+	});
+	var imageDetail = Ti.UI.createView({
+		backgroundImage : info.image,
+		top: 0,
+		witdh: 270,
+		height: 370,
+	});
+	detail.add(description);
+	detail.add(imageDetail);
+
+nav.openWindow(detail);
+};
+var nav = Titanium.UI.iOS.createNavigationWindow({
+   window: win1
+});
+
+
+var gamesSection = Ti.UI.createListSection({ headerTitle:'Best games of 2014'});
+
+//table
+var windowTable = Ti.UI.createTableView({
+	separatorColor: "black",
+});
+
+//sections
+var sections= [];
+for(n in data.games){
+	 var section = Ti.UI.createTableViewSection({
+		headerTitle:n,
+	});
+	section.addEventListener('click', function(e){
+click(e.source.data);
+});
+	for(i=0;i<data.games[n].length;i++){
+	 	var row = Ti.UI.createTableViewRow({
+	 		title: data.games[n][i].name,
+	 		d: data.games[n][i].description,
+	 	});
+	 	section.add(row);
+	 }
+	sections.push(section);
+}
+windowTable.setData(sections);
+
+
+
+
+
+// //Listview
+// var windowList = Ti.UI.createListView();
+// //sections
+// var sectionsName =[];
+// 
+// 
+// gamesSection.setItems(games);
+// sectionsName.push(gamesSection);
+// windowList.sections=sectionsName;
+
+win1.add(windowTable);
+win1.open();
