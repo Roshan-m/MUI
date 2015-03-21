@@ -2,10 +2,19 @@
 //3-10-2015
 //Client Information
 
-var goty = {
+var win1 = Ti.UI.createWindow({
+	backgroundColor:"#ffffff",
+});
+
+var nav = Titanium.UI.iOS.createNavigationWindow({
+   window: win1
+});
+
+var gamesSection = Ti.UI.createListSection({ headerTitle:'Best games of 2014'});
+var games = {
 	
-		ps4:{
-			title: 'Playstation 4',
+		ps4:[
+			{title: 'Playstation 4',
 			items:	[
 			{name: "Destiny",
 			 image:"image/destiny.jpg",
@@ -21,10 +30,10 @@ var goty = {
 			 desc: ''},
 			 {name: 'Dragon Ball Xenoverse',
 			image: 'image/dragonball.jpg',
-			desc: ''}]},
+			desc: ''}]}],
 	
-		xboxOne:{
-			title: 'Xbox One',
+		xboxOne:[
+			{title: 'Xbox One',
 			items:	[
 			{name: 'Call Of Duty : Advanced Warfare',
 			image: 'image/codaw.jpg', 
@@ -40,9 +49,9 @@ var goty = {
 			desc:''},
 			{name: 'Titanfall',
 			image: 'image/titanfall.jpg',
-			desc: ''}]},
+			desc: ''}]}],
 		
-		wiiU:{
+		wiiU:[{
 			title: 'Wii U',
 			items:	[
 			{name: 'Donkey Kong Country Tropical Freeze',
@@ -59,10 +68,10 @@ var goty = {
 			desc:''},
 			{name: 'Super Smash Bros. for Wii U',
 			image: 'image/ssb4.png',
-			desc: ''}]},
+			desc: ''}]}],
 
 		
-		psVita:{
+		psVita:[{
 			title: 'PS Vita',
 			items:	[
 			{name: 'COUNTER SPY',
@@ -79,9 +88,9 @@ var goty = {
 			desc:''},
 			{name: 'OlliOlli',
 			image: 'image/olliolli.jpg',
-			desc: ''}]},
+			desc: ''}]}],
 	
-		threeDS:{
+		threeDS:[{
 			title: '3DS',
 			items:	[
 			{name: 'Super Smash Bros. for 3DS',
@@ -98,5 +107,52 @@ var goty = {
 			desc:''},
 			{name: 'Pokemon Alpha Sapphire',
 			image: 'image/pokemon.jpg',
-			desc: ''}]},
+			desc: ''}]}]
 };
+
+
+//table
+var windowTable = Ti.UI.createTableView({
+	separatorColor: "black",
+});
+
+//sections
+var sections= [];
+for(n in games){
+	 var section = Ti.UI.createTableViewSection({
+		headerTitle:n,
+	});
+	section.addEventListener('click', function(e){
+		nav.openWindow(descriptionWin);
+		descriptionWin.add();
+		console.log(e);
+		generateLabel(e);
+	console.log();
+});
+	for(i=0;i<games[n].length;i++){
+	 	var row = Ti.UI.createTableViewRow({
+	 		title: games[n][i].title,
+	 		d: games[n][i].description,
+	 	});
+	 	section.add(row);
+	 }
+	sections.push(section);
+}
+windowTable.setData(sections);
+
+
+
+
+
+// //Listview
+// var windowList = Ti.UI.createListView();
+// //sections
+// var sectionsName =[];
+// 
+// 
+// gamesSection.setItems(games);
+// sectionsName.push(gamesSection);
+// windowList.sections=sectionsName;
+
+win1.add(windowTable);
+win1.open();
