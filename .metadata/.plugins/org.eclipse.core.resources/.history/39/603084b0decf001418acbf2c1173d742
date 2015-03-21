@@ -1,0 +1,150 @@
+//Roshan Mykoo
+//3-10-2015
+//Client Information
+
+var win1 = Ti.UI.createWindow({
+	backgroundColor:"#ffffff",
+});
+
+var nav = Titanium.UI.iOS.createNavigationWindow({
+   window: win1
+});
+
+var gamesSection = Ti.UI.createListSection({ headerTitle:'Best games of 2014'});
+var games = {
+	
+		Playstation4:[
+			
+			{title: "Destiny",
+			 image:"image/destiny.jpg",
+			 desc:""},
+			 {title: 'Bloodborne',
+			 image: 'image/bloodborne.png',
+			 desc: ''},
+			 {title: 'The Order: 1886',
+			 image:'image/',
+			 desc:''},
+			 {title: 'The Last of Us',
+			 image: 'image/',
+			 desc: ''},
+			 {title: 'Dragon Ball Xenoverse',
+			image: 'image/dragonball.jpg',
+			desc: ''}],
+	
+		XboxOne:[
+			
+			{title: 'Call Of Duty : Advanced Warfare',
+			image: 'image/codaw.jpg', 
+			desc: ''},
+			{title:'Dragon Age Inquisition',
+			image: 'image/gradonare.jpg',
+			desc: ''},
+			{title: 'Forza Horizon 2',
+			image: 'image/forza.jpg',
+			desc:''},
+			{title: 'Sunset Overdrive',
+			image:'image/sunset.jpg',
+			desc:''},
+			{title: 'Titanfall',
+			image: 'image/titanfall.jpg',
+			desc: ''}],
+		
+		WiiU:[
+			{title: 'Donkey Kong Country Tropical Freeze',
+			image: 'image/dk.jpg', 
+			desc: ''},
+			{title:'Bayonetta 2',
+			image: 'image/bayonetta.jpg',
+			desc: ''},
+			{title: 'Hyrule Warriors',
+			image: 'image/hyrule.jpg',
+			desc:''},
+			{title: 'Mario Kart 8',
+			image:'image/mariokart.jpg',
+			desc:''},
+			{title: 'Super Smash Bros. for Wii U',
+			image: 'image/ssb4.png',
+			desc: ''}],
+
+		
+		PSVita:[{
+			title: 'COUNTER SPY',
+			image: 'image/counterspy.jpg', 
+			desc: ''},
+			{title:'Shovel Knight',
+			image: 'image/shovelknight.png',
+			desc: ''},
+			{title: 'FIFA 15',
+			image: 'image/fifa15.jpg',
+			desc:''},
+			{title: 'The Binding of Isaac',
+			image:'image/isaac.jpg',
+			desc:''},
+			{title: 'OlliOlli',
+			image: 'image/olliolli.jpg',
+			desc: ''}],
+	
+		'3DS':[
+			{title: 'Super Smash Bros. for 3DS',
+			image: 'image/ssb3ds.png', 
+			desc: ''},
+			{title:'Animals Crossing New Leaf',
+			image: 'image/animalcross.jpg',
+			desc: ''},
+			{title: 'Kirby Triple Deluxe',
+			image: 'image/kirby.jpg',
+			desc:''},
+			{title: 'Mario Golf World Tour',
+			image:'image/marioGolf.jpg',
+			desc:''},
+			{title: 'Pokemon Alpha Sapphire',
+			image: 'image/pokemon.jpg',
+			desc: ''}]
+};
+
+
+//table
+var windowTable = Ti.UI.createTableView({
+	separatorColor: "black",
+});
+
+//sections
+var sections= [];
+for(n in games){
+	 var section = Ti.UI.createTableViewSection({
+		headerTitle:n,
+	});
+	section.addEventListener('click', function(e){
+		nav.openWindow(descriptionWin);
+		descriptionWin.add();
+		console.log(e);
+		generateLabel(e);
+	console.log();
+});
+	for(i=0;i<games[n].length;i++){
+	 	var row = Ti.UI.createTableViewRow({
+	 		title: games[n][i].title,
+	 		d: games[n][i].description,
+	 	});
+	 	section.add(row);
+	 }
+	sections.push(section);
+}
+windowTable.setData(sections);
+
+
+
+
+
+// //Listview
+// var windowList = Ti.UI.createListView();
+// //sections
+// var sectionsName =[];
+// 
+// 
+// gamesSection.setItems(games);
+// sectionsName.push(gamesSection);
+// windowList.sections=sectionsName;
+
+win1.add(windowTable);
+win1.open();
