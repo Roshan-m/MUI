@@ -33,7 +33,7 @@ var games = {
 				image: 'codaw.jpg', 
 				desc: "Call of Duty: Advanced Warfare envisions the powerful battlegrounds of the future, where both technology and tactic have evolved to usher in a new era of combat for the franchise. Delivering a stunning performance, Academy Award winning actor Kevin Spacey stars as Jonathan Irons -- one of the most powerful men in the world -- shaping this chilling vision of the future of war. The game takes place in a plausible future in which technological progress and today's military practices have converged with powerful consequences. "},
 				{name:'Dragon Age Inquisition',
-				image: 'gradonare.jpg',
+				image: 'dragonage.jpg',
 				desc: 'In Dragon Age: Inquisition the world of Thedas is being torn apart by a massive, mysterious breach in the sky. Players must assume the role of the Inquisitor and lead a team of legendary heroes to uncover the truth behind the impending devastation.'},
 				{name: 'Forza Horizon 2',
 				image: 'forza.jpg',

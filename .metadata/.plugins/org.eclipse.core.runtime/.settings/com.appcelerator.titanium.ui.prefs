@@ -1,6 +1,6 @@
 =run
 1503_MUI_Android\:launchMode=run
-1503_MUI_Android\:launchShortcut=com.appcelerator.titanium.mobile.ui.android.simulator.launchShortcut.Google Nexus 6 - 5.0.0 - API 21 - 1440x2560
+1503_MUI_Android\:launchShortcut=com.appcelerator.titanium.mobile.ui.android.simulator.launchShortcut.Google Nexus 5 - 5.0.0 - API 21 - 1080x1920
 1503_MUI_Android_Mykoo\:launchMode=run
 1503_MUI_Android_Mykoo\:launchShortcut=com.appcelerator.titanium.acs.ui.run.local.launchShortcut
 1503_MUI_Mykoo_Roshan\:launchMode=run
