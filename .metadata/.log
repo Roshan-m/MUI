@@ -197,3 +197,12 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/RoshanM/
 
 !ENTRY com.appcelerator.titanium.android.core 4 0 2015-03-22 16:28:10.534
 !MESSAGE There are no Android devices connected
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-03-22 17:42:28.548
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.aptana.usage.internal.DefaultAnalyticsEventHandler$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-03-22 17:42:28.549
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.aptana.usage.internal.DefaultAnalyticsEventHandler$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-03-22 17:42:28.549
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.aptana.usage.internal.DefaultAnalyticsEventHandler$1
