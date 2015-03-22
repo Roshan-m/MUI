@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<servers>
+<server location="/Users/RoshanM/Google Drive/Full Sail/MUI/1503_MUI_Android_Mykoo" port="60011" type="com.appcelerator.titanium.acs.local.type">
+<name>1503_MUI_Android_Mykoo</name>
+</server>
+</servers>

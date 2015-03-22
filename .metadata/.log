@@ -194,3 +194,6 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/RoshanM/
 
 !ENTRY com.appcelerator.titanium.android.core 4 0 2015-03-21 17:01:43.375
 !MESSAGE There are no Android devices connected
+
+!ENTRY com.appcelerator.titanium.android.core 4 0 2015-03-22 16:28:10.534
+!MESSAGE There are no Android devices connected

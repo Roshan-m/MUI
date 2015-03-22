@@ -49,8 +49,6 @@ var gamesSection = Ti.UI.createListSection({
 //table
 var windowTable = Ti.UI.createTableView({
 	separatorColor : "black",
-	search: bSearch,
-	top:20,
 });
 
 //sections
@@ -86,10 +84,5 @@ windowTable.setData(sections);
 // sectionsName.push(gamesSection);
 // windowList.sections=sectionsName;
 
-
-var bSearch = Ti.UI.createSearchBar({
-	top:30,
-	
-});
 win1.add(windowTable);
 win1.open();
