@@ -1,0 +1,113 @@
+//Roshan Mykoo
+//3-10-2015
+//Client Information
+
+var games = {
+		playstation : {
+			title: 'Playstation 4',
+			items:[
+			
+			{name: "Destiny",
+			 image:"destiny.jpg",
+			 desc:'Destiny Desc'},
+			 {name: 'Bloodborne',
+			 image: 'bloodborne.png',
+			 desc: "From Hidetaka Miyazaki and FromSoftware -- creators of the legendary games Demon's Souls and Dark Souls -- comes Bloodborne, an all-new action RPG brimming with unforgiving, unrelenting terror, developed exclusively for the PlayStation 4 system."},
+			 {name: 'The Order: 1886',
+			 image:'theorder.jpg',
+			 desc:'Discover history’s darkest secret in The Order: 1886, the game that re-writes history by introducing a unique vision of Victorian-Era London, where Man uses advanced technology to battle a powerful and ancient foe. In an alternate history where myths and technology co-exist, players take on the role of Sir Galahad, a hardened member of an elite order of Knights engaging in a centuries-old war that will determine the course of history forever.'},
+			 {name: 'The Last of Us',
+			 image: 'lastofus.jpg',
+			 desc: 'Survive an apocalypse on Earth in The Last of Us, a PlayStation 3-exclusive title by Naughty Dog. Here, you will find abandoned cities reclaimed by nature. Here is a population decimated by a modern plague. Here, there are only survivors killing each other for food, weapons, or whatever they can get their hands on. Here, you find no hope.'},
+			 {name: 'Dragon Ball Xenoverse',
+			  image: 'dragonball.jpg',
+		   	  desc: 'Kamehameha! Goku battles all rivals in Dragon Ball Xenoverse, a fighting game that brings players all the frenzied battles between Goku and his fiercest enemies, such as Vegeta, Fr i eza, Cell and much more, with new gameplay design!'}],
+	},
+	
+	
+		xbox : {
+			title: 'Xbox One',
+			items: [
+		
+				{name: 'Call Of Duty : Advanced Warfare',
+				image: 'codaw.jpg', 
+				desc: ''},
+				{name:'Dragon Age Inquisition',
+				image: 'gradonare.jpg',
+				desc: ''},
+				{name: 'Forza Horizon 2',
+				image: 'forza.jpg',
+				desc:''},
+				{name: 'Sunset Overdrive',
+				image:'sunset.jpg',
+				desc:''},
+				{name: 'Titanfall',
+				image: 'titanfall.jpg',
+				desc: ''}],
+			
+	},
+		
+		wiiu : {
+			title: 'Wii U',
+			items:[
+			{name: 'Donkey Kong Country Tropical Freeze',
+			image: 'dk.jpg', 
+			desc: ''},
+			{name:'Bayonetta 2',
+			image: 'bayonetta.jpg',
+			desc: ''},
+			{name: 'Hyrule Warriors',
+			image: 'hyrule.jpg',
+			desc:''},
+			{name: 'Mario Kart 8',
+			image:'mariokart.jpg',
+			desc:''},
+			{name: 'Super Smash Bros. for Wii U',
+			image: 'ssb4.png',
+			desc: ''}],
+	},
+		psvita : {
+			title: 'PS Vita',
+			items: [
+			
+			{name: 'COUNTER SPY',
+			image: 'counterspy.jpg', 
+			desc: ''},
+			{name:'Shovel Knight',
+			image: 'shovelknight.png',
+			desc: ''},
+			{name: 'FIFA 15',
+			image: 'fifa15.jpg',
+			desc:''},
+			{name: 'The Binding of Isaac',
+			image:'isaac.jpg',
+			desc:''},
+			{name: 'OlliOlli',
+			image: 'olliolli.jpg',
+			desc: ''}],
+	},
+	
+	
+		ds : {
+			title: 'Nintendo 3DS',
+			items: [
+			
+			{name: 'Super Smash Bros. for 3DS',
+			image: 'ssb3ds.png', 
+			desc: ''},
+			{name:'Animals Crossing New Leaf',
+			image: 'animalcross.jpg',
+			desc: ''},
+			{name: 'Kirby Triple Deluxe',
+			image: 'kirby.jpg',
+			desc:''},
+			{name: 'Mario Golf World Tour',
+			image:'marioGolf.jpg',
+			desc:''},
+			{name: 'Pokemon Alpha Sapphire',
+			image: 'pokemon.jpg',
+			desc: ''}]
+	},
+};
+
+exports.games=(games);

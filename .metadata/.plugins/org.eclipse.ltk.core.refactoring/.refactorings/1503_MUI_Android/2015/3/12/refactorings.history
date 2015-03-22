@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;1503_MUI_Android/Resources/sec.js&apos; to &apos;Data.js&apos;" description="Rename resource &apos;sec.js&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Resources/sec.js" name="Data.js" stamp="1426971840571" updateReferences="true"/>
+</session>

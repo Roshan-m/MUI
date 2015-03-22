@@ -12,20 +12,32 @@ var detail = function(info) {
 	var gameDetail = Ti.UI.createWindow({
 	backgroundColor:'white',
 	title : info.name,
+	layout : 'vertical'
+	});
+	var imageDetail = Ti.UI.createView({
+	backgroundImage : info.image,
+	top: 0,
+	width: 270,
+	height: 310,
 	});
 	var gameinfo = Ti.UI.createLabel({
 		text: info.desc,
-		bottom: 50,
+		top: 15,
 		left: 7,
 	});
-	var imageDetail = Ti.UI.createView({
-		backgroundImage : info.image,
-		top: 0,
-		witdh: 270,
-		height: 310,
-	});
-	gameDetail.add(gameinfo);
-	gameDetail.add(imageDetail);
+
+var scroll = Ti.UI.createScrollView({
+	layout:'vertical',
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+	top:0,
+});
+	
+	
+	scroll.add(imageDetail);
+	scroll.add(gameinfo);
+	gameDetail.add(scroll);
+	
 
 nav.openWindow(gameDetail);
 };
