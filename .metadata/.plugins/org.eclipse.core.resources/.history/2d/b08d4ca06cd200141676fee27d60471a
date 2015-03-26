@@ -1,0 +1,21 @@
+//Roshan Mykoo
+//3-24-2015
+//MUI
+//Project Utility App
+
+
+var nav = Ti.UI.createNavigationWindow({
+	
+});
+
+var window1= Ti.UI.createWindow({
+	backgroundColor:'black',
+	headerTitle:"Shadow of Mordor",
+	
+});
+
+
+
+
+nav.add(window1);
+nav.open();

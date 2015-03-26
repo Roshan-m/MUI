@@ -1,0 +1,22 @@
+//Roshan Mykoo
+//3-24-2015
+//MUI
+//Project Utility App
+
+
+var nav = Titanium.UI.iOS.createNavigationWindow({
+   window: win1,
+   
+});
+
+
+var win1= Ti.UI.createWindow({
+	backgroundColor:'black',
+	headerTitle:"Shadow of Mordor",
+	
+});
+
+
+
+
+nav.open();

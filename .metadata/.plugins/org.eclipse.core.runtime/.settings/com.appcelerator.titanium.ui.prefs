@@ -5,7 +5,9 @@
 1503_MUI_Android_Mykoo\:launchShortcut=com.appcelerator.titanium.acs.ui.run.local.launchShortcut
 1503_MUI_Mykoo_Roshan\:launchMode=run
 1503_MUI_Mykoo_Roshan\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.A664DB10-48A6-48C6-BEAF-3C3258B66F1F
-LAST_LAUNCH_TIMESTAMP=1426946705539
+1503_Week4_Mykoo_Roshan\:launchMode=run
+1503_Week4_Mykoo_Roshan\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.E4B31352-B632-463C-835E-1B5BE623401D
+LAST_LAUNCH_TIMESTAMP=1427227504898
 about_me\:launchMode=run
 about_me\:launchShortcut=com.appcelerator.titanium.mobile.ui.android.device.launchShortcut
 eclipse.preferences.version=1

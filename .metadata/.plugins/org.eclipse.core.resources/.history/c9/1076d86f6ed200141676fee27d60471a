@@ -1,0 +1,16 @@
+//Roshan Mykoo
+//3-24-2015
+//MUI
+//Project Utility App
+
+var win1 = Ti.UI.createWindow({
+	backgroundColor:"#ffffff",
+	title: 'Middle Earth: Shadow of Mordor',
+});
+
+var nav = Titanium.UI.iOS.createNavigationWindow({
+   window: win1,
+   
+});
+
+nav.open();
