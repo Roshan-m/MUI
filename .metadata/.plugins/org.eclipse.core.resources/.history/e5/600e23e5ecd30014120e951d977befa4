@@ -1,0 +1,44 @@
+//Roshan Mykoo
+//3-24-2015
+//MUI
+//Project Utility App
+
+var win1 = Ti.UI.createWindow({
+	backgroundColor:"#ffffff",
+	title: 'Middle Earth: Shadow of Mordor',
+	// titleImage:"shadowlogo.png",
+// 	
+});
+
+
+var nav = Titanium.UI.iOS.createNavigationWindow({
+   window: win1,
+   
+});
+
+var logo = Ti.UI.createImageView({
+	image: "shadowlogo.png",
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE,
+	top:10,
+});
+
+var login = Ti.UI.createImageView({
+	width: 150,
+	height: 100,
+	backgroundColor: 'blue',
+	bottom:200,
+	
+});
+var textLog = Ti.UI.createLabel({
+	text:'login',
+	textColor: 'white',
+});
+login.add(textLog);
+win1.add(login);
+
+win1.add(logo);
+
+
+
+nav.open();

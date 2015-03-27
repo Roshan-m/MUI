@@ -1,0 +1,91 @@
+//Roshan Mykoo
+//3-24-2015
+//MUI
+//Project Utility App
+
+var win1 = Ti.UI.createWindow({
+	backgroundColor:"#ffffff",
+	title: 'Middle Earth: Shadow of Mordor',
+	// titleImage:"shadowlogo.png",
+// 	
+});
+
+
+var nav = Titanium.UI.iOS.createNavigationWindow({
+   window: win1,
+   
+});
+
+var logo = Ti.UI.createImageView({
+	image: "shadowlogo.png",
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE,
+	top:10,
+});
+
+var login = Ti.UI.createImageView({
+	width: 150,
+	height: 100,
+	backgroundColor: 'blue',
+	bottom:200,
+	
+});
+var textLog = Ti.UI.createLabel({
+	text:'login',
+	color: 'white',
+});
+
+var win2 = Ti.UI.createWindow({
+	backgroundColor: 'black',
+});
+
+login.addEventListener('click', function(){
+	win2.open();
+});
+login.add(textLog);
+win1.add(login);
+
+win1.add(logo);
+
+
+
+var gamesSection = Ti.UI.createListSection({ headerTitle:'Best games of 2014'});
+
+//table
+var windowTable = Ti.UI.createTableView({
+	separatorColor: "white",
+});
+
+//sections
+var sections= [];
+for(n in data.games){
+	
+	 var section = Ti.UI.createTableViewSection({
+		headerTitle:data.games[n].title,
+	});
+	section.addEventListener('click', function(e){
+	detail(e.source.data);
+});
+	for(i=0;i<data.games[n].items.length;i++){
+		 var info = data.games[n].items[i];
+		
+	 	var row = Ti.UI.createTableViewRow({
+	 		title: data.games[n].items[i].name,
+	 		data: info
+	 	});
+	 	section.add(row);
+	 }
+	sections.push(section);
+}
+windowTable.setData(sections);
+
+
+
+
+
+
+win2.add(windowTable);
+
+
+
+nav.open();

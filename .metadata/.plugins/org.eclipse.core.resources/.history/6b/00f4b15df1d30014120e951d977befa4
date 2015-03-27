@@ -1,0 +1,113 @@
+//Roshan Mykoo
+//3-24-2015
+//MUI
+//Project Utility App
+
+var win1 = Ti.UI.createWindow({
+	backgroundColor:"#ffffff",
+	title: 'Middle Earth: Shadow of Mordor',
+	// titleImage:"shadowlogo.png",
+// 	
+});
+
+
+var nav = Titanium.UI.iOS.createNavigationWindow({
+   window: win1,
+   
+});
+
+var logo = Ti.UI.createImageView({
+	image: "shadowlogo.png",
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE,
+	top:10,
+});
+
+var login = Ti.UI.createImageView({
+	width: 150,
+	height: 100,
+	backgroundColor: 'blue',
+	bottom:200,
+	
+});
+var textLog = Ti.UI.createLabel({
+	text:'login',
+	color: 'white',
+});
+
+var win2 = Ti.UI.createWindow({
+	backgroundColor: 'black',
+});
+
+login.addEventListener('click', function(){
+	win2.open();
+});
+login.add(textLog);
+win1.add(login);
+
+win1.add(logo);
+
+
+
+var gamesSection = Ti.UI.createListSection({ headerTitle:'Best games of 2014'});
+
+//table
+var windowTable = Ti.UI.createTableView({
+	separatorColor: "white",
+});
+var games = {
+		playstation : {
+			title: 'Playstation 4',
+			items:[
+			
+			{name: "Destiny",
+			 image:"destiny.jpg",
+			 desc:'From the creators of Halo and the publisher of Call of Duty comes Destiny. With an unprecedented variety of FPS gameplay, Destiny promises to deliver an incredible story set within a newly-imagined, always-connected universe filled with action and adventure.'},
+			 {name: 'Bloodborne',
+			 image: 'bloodborne.png',
+			 desc: "From Hidetaka Miyazaki and FromSoftware -- creators of the legendary games Demon's Souls and Dark Souls -- comes Bloodborne, an all-new action RPG brimming with unforgiving, unrelenting terror, developed exclusively for the PlayStation 4 system."},
+			 {name: 'The Order: 1886',
+			 image:'theorder.jpg',
+			 desc:'Discover history’s darkest secret in The Order: 1886, the game that re-writes history by introducing a unique vision of Victorian-Era London, where Man uses advanced technology to battle a powerful and ancient foe. In an alternate history where myths and technology co-exist, players take on the role of Sir Galahad, a hardened member of an elite order of Knights engaging in a centuries-old war that will determine the course of history forever.'},
+			 {name: 'The Last of Us',
+			 image: 'lastofus.jpg',
+			 desc: 'Survive an apocalypse on Earth in The Last of Us, a PlayStation 3-exclusive title by Naughty Dog. Here, you will find abandoned cities reclaimed by nature. Here is a population decimated by a modern plague. Here, there are only survivors killing each other for food, weapons, or whatever they can get their hands on. Here, you find no hope.'},
+			 {name: 'Dragon Ball Xenoverse',
+			  image: 'dragonball.jpg',
+		   	  desc: 'Kamehameha! Goku battles all rivals in Dragon Ball Xenoverse, a fighting game that brings players all the frenzied battles between Goku and his fiercest enemies, such as Vegeta, Fr i eza, Cell and much more, with new gameplay design!'}]
+	
+	}};
+	
+//sections
+var sections= [];
+for(n in games){
+	
+	 var section = Ti.UI.createTableViewSection({
+		headerTitle:games[n].title,
+	});
+	section.addEventListener('click', function(e){
+	detail(e.source.data);
+});
+	for(i=0;i<data.games[n].items.length;i++){
+		 var info = games[n].items[i];
+		
+	 	var row = Ti.UI.createTableViewRow({
+	 		title: games[n].items[i].name,
+	 		data: info
+	 	});
+	 	section.add(row);
+	 }
+	sections.push(section);
+}
+windowTable.setData(sections);
+
+
+
+
+
+
+win2.add(windowTable);
+
+
+
+nav.open();
